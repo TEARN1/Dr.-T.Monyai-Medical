@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. T.Monyai Medical | GP & Dentist in Tembisa, Johannesburg</title>
+    
+    <!-- SEO and Social Media -->
+    <meta name="description" content="Dr. T.Monyai Medical offers expert GP and Dental services in Tembisa. Over 15 years of experience in primary care, cosmetic dentistry, and advanced diagnostics. Book your appointment today.">
+    <meta name="keywords" content="Dr. T.Monyai, Medical Clinic Tembisa, GP Tembisa, Dentist Tembisa, Johannesburg Medical, Dental Services, Primary Care, Health Screening, Dr Monyai">
+    <link rel="canonical" href="https://www.drtmonyai.co.za/">
+    <link rel="icon" type="image/png" href="/images/favicon.png"> 
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.drtmonyai.co.za/">
+    <meta property="og:title" content="Dr. T.Monyai Medical | Expert GP & Dental Care">
+    <meta property="og:description" content="Providing advanced medical and dental assistance in Tembisa with over 15 years of experience.">
+    <meta property="og:image" content="https://www.drtmonyai.co.za/images/social-preview.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.drtmonyai.co.za/">
+    <meta property="twitter:title" content="Dr. T.Monyai Medical | Tembisa GP & Dentist">
+    <meta property="twitter:description" content="Experience the future of healthcare with Dr. T.Monyai. Advanced diagnostics and compassionate care.">
+    <meta property="twitter:image" content="https://www.drtmonyai.co.za/images/social-preview.jpg">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalClinic",
+      "name": "Dr. T.Monyai Medical",
+      "alternateName": "Dr Monyai Clinic",
+      "description": "A premier medical center in Tembisa providing General Practitioner and Dental services with advanced 3D diagnostic technology.",
+      "url": "https://www.drtmonyai.co.za/",
+      "logo": "https://www.drtmonyai.co.za/images/logo.png",
+      "image": "https://www.drtmonyai.co.za/images/clinic-exterior.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Health St",
+        "addressLocality": "Tembisa",
+        "addressRegion": "Gauteng",
+        "postalCode": "1632",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.9964,
+        "longitude": 28.2268
+      },
+      "telephone": "+27-11-123-4567",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "17:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "13:00"
+        }
+      ],
+      "medicalSpecialty": ["GeneralPractice", "Dentistry"],
+      "priceRange": "$$"
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Health Tips Ticker -->
+    <div id="health-ticker">
+        <div class="ticker-content">
+            <span>Tip: Drink at least 8 glasses of water a day.</span>
+            <span>Tip: Regular exercise can reduce the risk of chronic diseases.</span>
+            <span>Tip: Don't forget your annual dental checkup!</span>
+            <span>Tip: A balanced diet is key to a healthy heart.</span>
+            <span>Tip: Practice mindfulness to reduce stress.</span>
+        </div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+
+    <!-- Advanced Liquid Background Shader -->
+    <canvas id="liquid-bg"></canvas>
+    <canvas id="dna-helix-bg"></canvas>
+    <div id="dna-info" class="glass">
+        <h4>Genetic Insights</h4>
+        <p>Advanced genomic screening for personalized medicine.</p>
+    </div>
+    <canvas id="bg-particles"></canvas>
+    
+    <!-- Parallax Floating Elements -->
+    <div class="parallax-layer" data-speed="0.1">
+        <div class="floating-blob blob-1"></div>
+    </div>
+    <div class="parallax-layer" data-speed="0.2">
+        <div class="floating-blob blob-2"></div>
+    </div>
+    
+    <div id="loader">
+        <div class="heartbeat"></div>
+    </div>
+
+    <!-- Custom Interactive Cursor -->
+    <div id="custom-cursor"></div>
+    <div id="cursor-dot"></div>
+
+    <header>
+        <h1>Dr. T.Monyai Medical</h1>
+        <button id="mobile-menu-toggle" aria-label="Toggle Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav id="main-nav">
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="theme-switcher">
+            <button id="voice-trigger" class="glass" title="Voice Commands">🎤</button>
+            <input type="checkbox" id="theme-toggle" aria-label="Toggle dark mode">
+            <label for="theme-toggle"><span></span></label>
+        </div>
+    </header>
+
+    <div class="parallax"></div>
+
+    <!-- 3D Medical Sphere Hero Section -->
+    <section id="hero-3d-sphere">
+        <canvas id="medical-sphere-canvas"></canvas>
+        <div class="hero-overlay">
+            <h2>Expert GP & Dental Care in Tembisa</h2>
+            <p>Experience advanced medical assistance with technology and compassion</p>
+            <button id="hero-book-btn" class="glass">Book Appointment</button>
+            <div class="floating-icons">
+                <svg class="icon icon-dna" viewBox="0 0 64 64" width="48" height="48" role="img" aria-label="DNA Helix Icon"><path d="M16 8c16 16 32 32 32 48" stroke="#00e0ff" stroke-width="3" fill="none"/><path d="M48 8C32 24 16 40 16 56" stroke="#00e0ff" stroke-width="3" fill="none"/></svg>
+                <svg class="icon icon-heart" viewBox="0 0 64 64" width="48" height="48" role="img" aria-label="Heart Icon"><path d="M32 56s-20-12-20-28a12 12 0 0 1 24 0 12 12 0 0 1 24 0c0 16-20 28-20 28z" stroke="#ff4081" stroke-width="3" fill="none"/></svg>
+                <svg class="icon icon-molecule" viewBox="0 0 64 64" width="48" height="48" role="img" aria-label="Medical Molecule Icon"><circle cx="32" cy="32" r="8" fill="#4caf50"/><circle cx="16" cy="16" r="4" fill="#00e0ff"/><circle cx="48" cy="16" r="4" fill="#00e0ff"/><circle cx="16" cy="48" r="4" fill="#00e0ff"/><circle cx="48" cy="48" r="4" fill="#00e0ff"/><line x1="32" y1="32" x2="16" y2="16" stroke="#4caf50" stroke-width="2"/><line x1="32" y1="32" x2="48" y2="16" stroke="#4caf50" stroke-width="2"/><line x1="32" y1="32" x2="16" y2="48" stroke="#4caf50" stroke-width="2"/><line x1="32" y1="32" x2="48" y2="48" stroke="#4caf50" stroke-width="2"/></svg>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section id="about">
+            <div class="section-header">
+                <h2>Dr. T.Monyai Medical</h2>
+                <p class="subtitle">Medical center that provides Medical assistance through a GP and Dental services.</p>
+            </div>
+            <div class="about-content glass">
+                <p>Welcome to the future of medical care. We combine over 15 years of experience with cutting-edge technology to provide the best medical and dental assistance in Tembisa.</p>
+            </div>
+            
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass">
+                        <span class="year">2008</span>
+                        <h4>Foundation</h4>
+                        <p>Dr. T.Monyai established the clinic with a vision for community-focused care.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass">
+                        <span class="year">2015</span>
+                        <h4>Expansion</h4>
+                        <p>Introduced advanced dental services and in-house diagnostic laboratory.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass">
+                        <span class="year">2023</span>
+                        <h4>Digital Transformation</h4>
+                        <p>Integrated 3D medical visualization and AI-assisted diagnostics.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass">
+                        <span class="year">2026</span>
+                        <h4>The Future</h4>
+                        <p>Leading the way in personalized genomic medicine and remote patient monitoring.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-section">
+                <h3>Our Expert Team</h3>
+                <div class="team-grid">
+                    <div class="team-card glass">
+                        <div class="team-img-placeholder">👨‍⚕️</div>
+                        <h4>Dr. T. Monyai</h4>
+                        <span>Chief Medical Officer</span>
+                        <p>Specializing in General Practice with 15+ years of experience.</p>
+                    </div>
+                    <div class="team-card glass">
+                        <div class="team-img-placeholder">👩‍⚕️</div>
+                        <h4>Dr. S. Khumalo</h4>
+                        <span>Senior Dentist</span>
+                        <p>Expert in cosmetic dentistry and oral surgery.</p>
+                    </div>
+                    <div class="team-card glass">
+                        <div class="team-img-placeholder">👨‍🔬</div>
+                        <h4>L. Sithole</h4>
+                        <span>Lab Director</span>
+                        <p>Leading our advanced diagnostic and genomic screening unit.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-floating-svg">
+                <svg viewBox="0 0 64 64" width="64" height="64"><circle cx="32" cy="32" r="28" fill="url(#aboutGrad)" opacity="0.3"/><defs><radialGradient id="aboutGrad" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#00e0ff"/><stop offset="100%" stop-color="#fff"/></radialGradient></defs></svg>
+            </div>
+        </section>
+
+        <section id="heart-container">
+            <div class="scanner-overlay"></div>
+            <div class="heart-stats">
+                <div class="stat-item">
+                    <span class="stat-label">BPM</span>
+                    <span class="stat-value" id="heart-bpm">72</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Status</span>
+                    <span class="stat-value" style="color: #4caf50;">Optimal</span>
+                </div>
+            </div>
+            <h2>Advanced Cardiac Visualization</h2>
+            <p>Real-time 3D cardiac monitoring and diagnostic simulation.</p>
+            <div id="heart-canvas"></div>
+            <div id="heart-info"></div>
+        </section>
+
+        <section id="body-map-section">
+            <h2>Interactive Symptom Map</h2>
+            <p>Select an area to learn about our specialized treatments.</p>
+            <div class="body-map-container glass">
+                <svg id="body-map" viewBox="0 0 200 400">
+                    <!-- Simplified Human Silhouette -->
+                    <path class="body-part" data-part="Head" d="M100,20 a20,20 0 1,1 0,40 a20,20 0 1,1 0,-40" />
+                    <path class="body-part" data-part="Chest" d="M70,70 h60 v80 h-60 z" />
+                    <path class="body-part" data-part="Arms" d="M40,80 h20 v100 h-20 z M140,80 h20 v100 h-20 z" />
+                    <path class="body-part" data-part="Legs" d="M75,160 h20 v150 h-20 z M105,160 h20 v150 h-20 z" />
+                </svg>
+                <div id="part-info" class="glass">
+                    <h3>Select a part</h3>
+                    <p>Click on the silhouette to see details.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="scroll-divider">
+            <svg viewBox="0 0 1000 100" preserveAspectRatio="none">
+                <path class="scroll-path" d="M0,50 Q250,0 500,50 T1000,50" />
+            </svg>
+        </div>
+
+        <section id="services">
+            <h2>Our Advanced Dashboard</h2>
+            <div class="bento-grid">
+                <div class="bento-item large glass flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="bento-content">
+                                <span class="bento-tag">Primary Care</span>
+                                <h3>General Practitioner</h3>
+                                <p>Expert medical assistance for you and your family. Over 15 years of trusted service.</p>
+                                <span class="bento-icon"></span>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="bento-content">
+                                <h3>GP Details</h3>
+                                <ul>
+                                    <li>Chronic Disease Management</li>
+                                    <li>Pediatric Care</li>
+                                    <li>Preventative Screenings</li>
+                                </ul>
+                                <a href="#contact" class="glass" style="text-decoration: none; text-align: center; padding: 10px; border-radius: 10px; color: white; font-weight: 600;">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bento-item glass vitals-card">
+                    <div class="bento-content">
+                        <span class="bento-tag">Live Monitoring</span>
+                        <h3>Patient Vitals</h3>
+                        <div class="vitals-display">
+                            <svg class="ekg-svg" viewBox="0 0 100 60">
+                                <path class="ekg-path" d="M0 30 L20 30 L25 10 L35 50 L40 30 L60 30 L65 20 L75 40 L80 30 L100 30" />
+                            </svg>
+                            <div class="vitals-data">
+                                <span>BP: 120/80</span>
+                                <span>O2: 98%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bento-item medium glass">
+                    <div class="bento-content">
+                        <span class="bento-tag">Specialized</span>
+                        <h3>Dental Services</h3>
+                        <p>Professional dental care including checkups, cleaning, and advanced procedures.</p>
+                        <span class="bento-icon">🦷</span>
+                    </div>
+                </div>
+                <div class="bento-item glass">
+                    <div class="bento-content">
+                        <h3>In-house Stitching</h3>
+                        <p>Immediate care for fresh wounds with professional stitching services.</p>
+                        <span class="bento-icon">🩹</span>
+                    </div>
+                </div>
+                <div class="bento-item glass">
+                    <div class="bento-content">
+                        <h3>Diagnostics</h3>
+                        <p>Advanced screening and laboratory services for accurate results.</p>
+                        <span class="bento-icon">🔬</span>
+                    </div>
+                </div>
+                <div class="bento-item glass bmi-card">
+                    <div class="bento-content">
+                        <h3>BMI Calculator</h3>
+                        <div class="bmi-inputs">
+                            <input type="number" id="bmi-weight" placeholder="Weight (kg)">
+                            <input type="number" id="bmi-height" placeholder="Height (cm)">
+                            <button id="calc-bmi-btn">Calculate</button>
+                        </div>
+                        <div id="bmi-result">Result: --</div>
+                    </div>
+                </div>
+                <div class="bento-item glass portal-card">
+                    <div class="bento-content">
+                        <span class="bento-tag">Secure</span>
+                        <h3>Patient Portal</h3>
+                        <p>Access your medical records and test results securely.</p>
+                        <button class="glass">Login / Register</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials">
+            <h2>Patient Experiences</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p>"Best doctor i have had for me and my family for over 15yrs now, he always makes he gives his patients the best 👌 never been there and not get well after"</p>
+                    <div class="testimonial-author">
+                        <strong>Nthabiseng Msibi</strong>
+                        <span>4 reviews · 8 photos</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"He's been my doctor since i was a toddler, so I can say he is the best doctor"</p>
+                    <div class="testimonial-author">
+                        <strong>Hope Moloi</strong>
+                        <span>3 reviews</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"He is a very good doctor. He also does in-house stitching for fresh wounds. He has good inter-action with clients."</p>
+                    <div class="testimonial-author">
+                        <strong>Thato Selepe</strong>
+                        <span>3 reviews · 1 photo</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="news">
+            <h2>News & Updates</h2>
+            <div class="news-search-container">
+                <input type="text" id="news-search" placeholder="Search articles..." class="glass">
+            </div>
+            <div id="news-container"></div>
+        </section>
+
+        <section id="contact">
+            <div class="contact-info">
+                <h2>Get in Touch</h2>
+                <p>We are here to provide you with the best medical assistance.</p>
+                
+                <div class="info-card">
+                    <div class="info-icon">📍</div>
+                    <div>
+                        <strong>Address</strong>
+                        <p>166 Kakongo Teanong Tembisa, Kempton Park, 1632</p>
+                    </div>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-icon">📞</div>
+                    <div>
+                        <strong>Phone</strong>
+                        <p>011 749 3117</p>
+                    </div>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-icon">⏰</div>
+                    <div>
+                        <strong>Hours</strong>
+                        <p id="clinic-status">Loading status...</p>
+                    </div>
+                </div>
+
+                <div class="faq-section">
+                    <h3>Common Questions</h3>
+                    <div class="faq-item glass">
+                        <div class="faq-question">Do you accept medical aid? <span>+</span></div>
+                        <div class="faq-answer">Yes, we accept most major South African medical aids. Please bring your card.</div>
+                    </div>
+                    <div class="faq-item glass">
+                        <div class="faq-question">How do I get my results? <span>+</span></div>
+                        <div class="faq-answer">Results are usually available within 24-48 hours via our secure Patient Portal.</div>
+                    </div>
+                    <div class="faq-item glass">
+                        <div class="faq-question">Do you do house calls? <span>+</span></div>
+                        <div class="faq-answer">House calls can be arranged for elderly or immobile patients in the Tembisa area.</div>
+                    </div>
+                </div>
+            </div>
+
+            <form id="contact-form" action="https://formspree.io/f/xoqgjvge" method="POST">
+                <h3>Send a Message</h3>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="How can we help you?" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+                <div id="form-status"></div>
+            </form>
+        </section>
+    </main>
+
+    <button id="scroll-top" class="glass">↑</button>
+
+    <div id="fab-container">
+        <button class="fab-main glass">
+            <span>+</span>
+        </button>
+        <div class="fab-options">
+            <a href="tel:+27119262586" class="fab-option glass" title="Call Us">📞</a>
+            <a href="https://wa.me/27119262586" class="fab-option glass" title="WhatsApp">💬</a>
+            <button id="open-chat" class="fab-option glass" title="Live Chat">🤖</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-newsletter">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to our newsletter for health tips and clinic news.</p>
+                <form id="newsletter-form" class="glass">
+                    <input type="email" placeholder="Your Email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <div id="newsletter-status"></div>
+            </div>
+            <div class="footer-social">
+                <a href="#" class="glass" title="Facebook">FB</a>
+                <a href="#" class="glass" title="Twitter">TW</a>
+                <a href="#" class="glass" title="Instagram">IG</a>
+                <a href="#" class="glass" title="LinkedIn">LI</a>
+            </div>
+            <div class="footer-bottom">
+                <p class="disclaimer">Disclaimer: The information on this website is for educational purposes only and does not substitute professional medical advice. Always consult with a qualified healthcare provider.</p>
+                <p>&copy; 2026 Dr. T.Monyai Medical. Built by Asemahle Nkwali <a href="mailto:asemahlenkwali@gmail.com">asemahlenkwali@gmail.com</a></p>
+                <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="cookie-consent-banner">
+        <p>This website uses cookies to enhance the user experience. By continuing to use this site, you agree to our use of cookies.</p>
+        <button id="accept-cookies" aria-label="Accept cookies">Accept</button>
+    </div>
+
+    <!-- Service Detail Modal -->
+    <div id="service-modal" class="modal glass">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- Appointment Booking Modal -->
+    <div id="booking-modal" class="modal glass">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Book Your Appointment</h3>
+            <form id="booking-form">
+                <div class="form-group">
+                    <label>Select Service</label>
+                    <select required>
+                        <option>General Practitioner</option>
+                        <option>Dental Services</option>
+                        <option>Diagnostics</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Preferred Date</label>
+                    <input type="date" required>
+                </div>
+                <div class="form-group">
+                    <label>Preferred Time</label>
+                    <input type="time" required>
+                </div>
+                <button type="submit" class="glass">Confirm Booking</button>
+            </form>
+            <div id="booking-status"></div>
+        </div>
+    </div>
+
+    <!-- Live Chat Mock -->
+    <div id="chat-widget" class="glass">
+        <div class="chat-header">
+            <span>Dr. T.Monyai Assistant</span>
+            <button id="close-chat">×</button>
+        </div>
+        <div class="chat-body" id="chat-messages">
+            <div class="message bot">Hello! How can I help you today?</div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="chat-input-field" placeholder="Type a message...">
+            <button id="send-chat">Send</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
